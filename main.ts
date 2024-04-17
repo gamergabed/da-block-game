@@ -2,10 +2,21 @@ namespace SpriteKind {
     export const Treeeeeee = SpriteKind.create()
     export const NPC = SpriteKind.create()
 }
+/**
+ * (Funny consept for homes)
+ * 
+ * Red & Blue: 3/4 added
+ * 
+ * Red: 1/2 added
+ * 
+ * Blue: 1/4 added
+ * 
+ * No color: Normal cost
+ */
 function setMap () {
-    tiles.setCurrentTilemap(tileUtil.createSmallMap(tilemap`level2`))
+    tiles.setCurrentTilemap(tileUtil.createSmallMap(tilemap`CityMap`))
     for (let value of tiles.getTilesByType(assets.tile`treeSpawn`)) {
-        if (0 < SpriteLimit) {
+        if (0 <= SpriteLimit) {
             mySprite2 = sprites.create(assets.image`treee`, SpriteKind.Treeeeeee)
             SpriteLimit += -1
             tiles.placeOnTile(mySprite2, value)
@@ -17,7 +28,7 @@ function setMap () {
 }
 function setPlayer () {
     mySprite = sprites.create(assets.image`PersonA`, SpriteKind.Player)
-    controller.moveSprite(mySprite)
+    controller.moveSprite(mySprite, 75, 75)
     scene.cameraFollowSprite(mySprite)
     tiles.placeOnRandomTile(mySprite, assets.tile`stone`)
     sprites.setDataImageValue(mySprite, "ImgA", assets.image`PersonA`)
@@ -30,11 +41,13 @@ function setPlayer () {
 /**
  * (Funny consept for homes)
  * 
- * Red: High
+ * Red & Blue: 3/4 added
  * 
- * Blue: Meh
+ * Red: 1/2 added
  * 
- * No color: Cheap
+ * Blue: 1/4 added
+ * 
+ * No color: Normal cost
  */
 function Init () {
     BeffyMode = game.ask("Allow extra sprites?")
@@ -70,7 +83,7 @@ scene.setBackgroundImage(assets.image`TitleEnlarge`)
 game.setDialogCursor(assets.image`PressA`)
 game.setDialogFrame(assets.image`Blank`)
 game.setDialogTextColor(1)
-game.showLongText("v1 By Ominouswolf", DialogLayout.Bottom)
+game.showLongText("v1 By Ominouswolf                                                                                                                                                                                                                                                                    ", DialogLayout.Full)
 game.setDialogTextColor(15)
 game.setDialogFrame(assets.image`TextBox`)
 game.showLongText("Move with your favorite way to move. Press [B] to switch between tools. Press [A] to use the tool. Press [MENU] to open Invintory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- Mark", DialogLayout.Bottom)
