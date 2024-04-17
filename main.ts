@@ -3,9 +3,9 @@ namespace SpriteKind {
     export const NPC = SpriteKind.create()
 }
 function setMap () {
-    tiles.setCurrentTilemap(tileUtil.createSmallMap(tilemap`level2`))
+    tiles.setCurrentTilemap(tileUtil.createSmallMap(tilemap`CityMap`))
     for (let value of tiles.getTilesByType(assets.tile`treeSpawn`)) {
-        if (0 < SpriteLimit) {
+        if (0 <= SpriteLimit) {
             mySprite2 = sprites.create(assets.image`treee`, SpriteKind.Treeeeeee)
             SpriteLimit += -1
             tiles.placeOnTile(mySprite2, value)
@@ -30,11 +30,13 @@ function setPlayer () {
 /**
  * (Funny consept for homes)
  * 
- * Red: High
+ * Red & Blue: 3/4 added
  * 
- * Blue: Meh
+ * Red: 1/2 added
  * 
- * No color: Cheap
+ * Blue: 1/4 added
+ * 
+ * No color: Normal cost
  */
 function Init () {
     BeffyMode = game.ask("Allow extra sprites?")
