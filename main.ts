@@ -82,7 +82,9 @@ game.setDialogTextColor(1)
 game.showLongText("v1 By Ominouswolf", DialogLayout.Bottom)
 game.setDialogTextColor(15)
 game.setDialogFrame(assets.image`TextBox`)
-game.showLongText("Move with your favorite way to move. Press [B] to switch between tools. Press [A] to use the tool. Press [MENU] to open Invintory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- Mark", DialogLayout.Bottom)
+if (game.ask("Yo need some instructions?", "    -Mark")) {
+    game.showLongText("Move with your favorite way to move. Press [B] to switch between tools. Press [A] to use the tool. Press [MENU] to open Invintory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- Mark", DialogLayout.Bottom)
+}
 Init()
 setMap()
 setPlayer()
