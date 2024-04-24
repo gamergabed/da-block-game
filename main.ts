@@ -2,6 +2,24 @@ namespace SpriteKind {
     export const Treeeeeee = SpriteKind.create()
     export const NPC = SpriteKind.create()
 }
+/**
+ * (Funny consept for homes)
+ * 
+ * Red & Blue: 3/4 added
+ * 
+ * Red: 1/2 added
+ * 
+ * Blue: 1/4 added
+ * 
+ * No color: Normal cost
+ */
+function personOddTile (X: number, Y: number) {
+    if ((X + Y) % 2 == 0) {
+        return true
+    } else {
+        return false
+    }
+}
 function setMap () {
     tiles.setCurrentTilemap(tileUtil.createSmallMap(tilemap`CityMap`))
     for (let value of tiles.getTilesByType(assets.tile`treeSpawn`)) {
@@ -27,17 +45,6 @@ function setPlayer () {
     sprites.readDataImage(mySprite, "ImgB").replace(8, 13)
     sprites.readDataImage(mySprite, "ImgB").replace(5, 2)
 }
-/**
- * (Funny consept for homes)
- * 
- * Red & Blue: 3/4 added
- * 
- * Red: 1/2 added
- * 
- * Blue: 1/4 added
- * 
- * No color: Normal cost
- */
 function Init () {
     BeffyMode = game.ask("Allow extra sprites?")
     if (BeffyMode) {
@@ -80,7 +87,7 @@ Init()
 setMap()
 setPlayer()
 game.onUpdate(function () {
-    if (!(mySprite.x % 8 == 0) || !(mySprite.y % 8 == 0)) {
+    if (personOddTile(mySprite.tilemapLocation().column, mySprite.tilemapLocation().row)) {
         mySprite.setImage(sprites.readDataImage(mySprite, "ImgB"))
     } else {
         mySprite.setImage(sprites.readDataImage(mySprite, "ImgA"))
