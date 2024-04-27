@@ -2,17 +2,6 @@ namespace SpriteKind {
     export const Treeeeeee = SpriteKind.create()
     export const NPC = SpriteKind.create()
 }
-/**
- * (Funny consept for homes)
- * 
- * Red & Blue: 3/4 added
- * 
- * Red: 1/2 added
- * 
- * Blue: 1/4 added
- * 
- * No color: Normal cost
- */
 function personOddTile (X: number, Y: number) {
     if ((X + Y) % 2 == 0) {
         return true
@@ -71,7 +60,11 @@ function Init () {
     0,
     9999
     ]
+    MenuUp = true
+    TitleScreen = true
 }
+let TitleScreen = false
+let MenuUp = false
 let HouseCosts: number[] = []
 let HouseNames: string[] = []
 let TelephoneNames: string[] = []
@@ -79,6 +72,7 @@ let BeffyMode = false
 let mySprite: Sprite = null
 let mySprite2: Sprite = null
 let SpriteLimit = 0
+Init()
 game.splash("Ominouswolf presents...")
 game.splash("Warning!", "(10+) Contains: Guns.")
 scene.setBackgroundImage(assets.image`TitleEnlarge`)
@@ -88,27 +82,60 @@ game.setDialogTextColor(1)
 game.showLongText("v1 By Ominouswolf", DialogLayout.Bottom)
 game.setDialogTextColor(15)
 game.setDialogFrame(assets.image`TextBox`)
-if (game.ask("Yo need some instructions?", "    -Mark")) {
-    game.showLongText("Move with your favorite way to move. Press [B] to switch between tools. Press [A] to use the tool. Press [MENU] to open Invintory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- Mark", DialogLayout.Bottom)
-}
-Init()
-setMap()
-setPlayer()
+let myMenu = miniMenu.createMenu(
+miniMenu.createMenuItem("PLAY"),
+miniMenu.createMenuItem("INSTRUCTIONS"),
+miniMenu.createMenuItem("GAME SETTINGS"),
+miniMenu.createMenuItem("SYST SETTINGS")
+)
+/**
+ * (Funny consept for homes)
+ * 
+ * Red & Blue: 3/4 added
+ * 
+ * Red: 1/2 added
+ * 
+ * Blue: 1/4 added
+ * 
+ * No color: Normal cost
+ */
 game.onUpdate(function () {
-    if (personOddTile(mySprite.tilemapLocation().column, mySprite.tilemapLocation().row)) {
-        if (controller.A.isPressed()) {
-            mySprite.setImage(sprites.readDataImage(mySprite, "ImgBH"))
+    if (MenuUp) {
+        if (TitleScreen) {
+            myMenu.onButtonPressed(controller.A, function (selection, selectedIndex) {
+                if (selectedIndex == 0) {
+                    setMap()
+                    setPlayer()
+                    myMenu.close()
+                    TitleScreen = false
+                    MenuUp = false
+                } else if (0 == 0) {
+                    game.showLongText("Move with your favorite way to move. Press [B] to switch between tools. Press [A] to use the tool. Press [MENU] to open Invintory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- Mark", DialogLayout.Bottom)
+                } else if (false) {
+                	
+                } else if (false) {
+                	
+                }
+            })
         } else {
-            mySprite.setImage(sprites.readDataImage(mySprite, "ImgB"))
+        	
         }
     } else {
-        if (controller.A.isPressed()) {
-            mySprite.setImage(sprites.readDataImage(mySprite, "ImgAH"))
+        if (personOddTile(mySprite.tilemapLocation().column, mySprite.tilemapLocation().row)) {
+            if (controller.A.isPressed()) {
+                mySprite.setImage(sprites.readDataImage(mySprite, "ImgBH"))
+            } else {
+                mySprite.setImage(sprites.readDataImage(mySprite, "ImgB"))
+            }
         } else {
-            mySprite.setImage(sprites.readDataImage(mySprite, "ImgA"))
+            if (controller.A.isPressed()) {
+                mySprite.setImage(sprites.readDataImage(mySprite, "ImgAH"))
+            } else {
+                mySprite.setImage(sprites.readDataImage(mySprite, "ImgA"))
+            }
         }
-    }
-    for (let value of sprites.allOfKind(SpriteKind.NPC)) {
-    	
+        for (let value of sprites.allOfKind(SpriteKind.NPC)) {
+        	
+        }
     }
 })
