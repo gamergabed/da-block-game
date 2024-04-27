@@ -35,15 +35,21 @@ function setMap () {
 }
 function setPlayer () {
     mySprite = sprites.create(assets.image`PersonA`, SpriteKind.Player)
-    controller.moveSprite(mySprite)
+    controller.moveSprite(mySprite, 75, 75)
     scene.cameraFollowSprite(mySprite)
     tiles.placeOnRandomTile(mySprite, assets.tile`stone`)
     sprites.setDataImageValue(mySprite, "ImgA", assets.image`PersonA`)
     sprites.setDataImageValue(mySprite, "ImgB", assets.image`PlayerB`)
+    sprites.setDataImageValue(mySprite, "ImgAH", assets.image`PersonAhold`)
+    sprites.setDataImageValue(mySprite, "ImgBH", assets.image`PersonBhold`)
     sprites.readDataImage(mySprite, "ImgA").replace(8, 13)
     sprites.readDataImage(mySprite, "ImgA").replace(5, 2)
     sprites.readDataImage(mySprite, "ImgB").replace(8, 13)
     sprites.readDataImage(mySprite, "ImgB").replace(5, 2)
+    sprites.readDataImage(mySprite, "ImgAH").replace(8, 13)
+    sprites.readDataImage(mySprite, "ImgAH").replace(5, 2)
+    sprites.readDataImage(mySprite, "ImgBH").replace(8, 13)
+    sprites.readDataImage(mySprite, "ImgBH").replace(5, 2)
 }
 function Init () {
     BeffyMode = game.ask("Allow extra sprites?")
@@ -74,7 +80,7 @@ let mySprite: Sprite = null
 let mySprite2: Sprite = null
 let SpriteLimit = 0
 game.splash("Ominouswolf presents...")
-game.splash("A game heavily inspired by a room in RecRoom...", "That was inspired by the hit game GTA...")
+game.splash("Warning!", "(10+) Contains: Guns.")
 scene.setBackgroundImage(assets.image`TitleEnlarge`)
 game.setDialogCursor(assets.image`PressA`)
 game.setDialogFrame(assets.image`Blank`)
@@ -90,9 +96,17 @@ setMap()
 setPlayer()
 game.onUpdate(function () {
     if (personOddTile(mySprite.tilemapLocation().column, mySprite.tilemapLocation().row)) {
-        mySprite.setImage(sprites.readDataImage(mySprite, "ImgB"))
+        if (controller.A.isPressed()) {
+            mySprite.setImage(sprites.readDataImage(mySprite, "ImgBH"))
+        } else {
+            mySprite.setImage(sprites.readDataImage(mySprite, "ImgB"))
+        }
     } else {
-        mySprite.setImage(sprites.readDataImage(mySprite, "ImgA"))
+        if (controller.A.isPressed()) {
+            mySprite.setImage(sprites.readDataImage(mySprite, "ImgAH"))
+        } else {
+            mySprite.setImage(sprites.readDataImage(mySprite, "ImgA"))
+        }
     }
     for (let value of sprites.allOfKind(SpriteKind.NPC)) {
     	

@@ -49,6 +49,50 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "TitleEnlarge"
     },
+    "image11": {
+        "data": "hwQIAAgAAAAAAAAAAAANQAAAAEDYICUA2FBSAAAAAAQAAA0EAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "PersonAhold"
+    },
+    "image12": {
+        "data": "hwQIAAgAAAAAAAAAAAANBAAAAATYICUA2FBSAAAAAEAAAA1AAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "PersonBhold"
+    },
+    "image13": {
+        "data": "hwQIAAgAAAAAuwAAwLsAAMC7AADAywAAwMsAAADLAAAAzAAAAP8AAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "gunBIG"
+    },
+    "image14": {
+        "data": "hwQIAAgAAAAAAAAAAAAAAAAAAAAAAAAAALAAAAC8AAAAvAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "gunSMALL"
+    },
+    "image15": {
+        "data": "hwQIAAgAAABwFwAAcBcAAHAXAAB3EQAAd9EAAHfRAAAREQAAiCIAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "teleport"
+    },
+    "image16": {
+        "data": "hwQIAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "8x8 base"
+    },
+    "anim1": {
+        "namespace": "myAnimations",
+        "id": "anim1",
+        "mimeType": "application/mkcd-animation",
+        "data": "NjQwMDA4MDAwODAwMDQwMDgwODg4ODA4Njg2NjY2ODg4Njg4ODg4Njg2Njg4ODg2ODY4Njg2ODY4Njg2ODg4Njg2Njg2Njg4ODA4ODg4MDg2MDY2NjYwODg4ODg4ODg2ODg2Njg4ODY2ODg4ODY4NjY4Njg4ODg2Njg4ODg4ODY4ODY2NjY4ODgwODg4ODA4ODA4ODg4MDg4ODY2ODY2ODY4ODg2ODY4Njg2ODY4Njg2ODg4ODY2ODY4ODg4ODY4ODg2NjY2ODY4MDg4ODgwODgwODg4ODA4ODg2NjY2ODg2ODg4ODg4NjY4ODg4Njg2Njg2ODg4ODY2ODg4NjY4ODY4ODg4ODg4ODA2NjY2MDY=",
+        "displayName": "portal1"
+    },
+    "anim2": {
+        "namespace": "myAnimations",
+        "id": "anim2",
+        "mimeType": "application/mkcd-animation",
+        "data": "NjQwMDA4MDAwODAwMDQwMDIwMjIyMjAyNDI0NDQ0MjIyNDIyMjIyNDI0NDIyMjI0MjQyNDI0MjQyNDI0MjIyNDI0NDI0NDIyMjAyMjIyMDI0MDQ0NDQwMjIyMjIyMjI0MjI0NDIyMjQ0MjIyMjQyNDQyNDIyMjI0NDIyMjIyMjQyMjQ0NDQyMjIwMjIyMjAyMjAyMjIyMDIyMjQ0MjQ0MjQyMjI0MjQyNDI0MjQyNDI0MjIyMjQ0MjQyMjIyMjQyMjI0NDQ0MjQyMDIyMjIwMjIwMjIyMjAyMjI0NDQ0MjI0MjIyMjIyNDQyMjIyNDI0NDI0MjIyMjQ0MjIyNDQyMjQyMjIyMjIyMjA0NDQ0MDQ=",
+        "displayName": "portal2"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

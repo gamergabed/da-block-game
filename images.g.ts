@@ -333,13 +333,154 @@ bbbbbbccccccccccbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccc66ccccccccbbbbbbbbbb1111111
 bbbbbbccccccccccbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbffffffbbbbbbcccccccccffffffccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcc
 bbbbbbccccccccccbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbffffffbbbbbbcccccccccffffffccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcc
 `;
+            case "image11":
+            case "PersonAhold":return img`
+. . . 8 8 . . . 
+. . . d d . . . 
+. . . . . . . . 
+. . . 2 5 . . . 
+. d . 5 2 . d . 
+. . . 2 5 . . . 
+. . . . . 4 4 . 
+. 4 4 . . . . . 
+`;
+            case "image12":
+            case "PersonBhold":return img`
+. . . 8 8 . . . 
+. . . d d . . . 
+. . . . . . . . 
+. . . 2 5 . . . 
+. d . 5 2 . d . 
+. . . 2 5 . . . 
+. 4 4 . . . . . 
+. . . . . 4 4 . 
+`;
+            case "image13":
+            case "gunBIG":return img`
+. . . . . . . . 
+. c c c c . . . 
+b b b b b b c f 
+b b b c c c c f 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+`;
+            case "image14":
+            case "gunSMALL":return img`
+. . . . . . . . 
+. . . . . . . . 
+. . . . . c c . 
+. . . . b b b . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+`;
+            case "image15":
+            case "teleport":return img`
+. . . 7 7 7 1 8 
+7 7 7 7 7 7 1 8 
+7 7 7 1 1 1 1 2 
+1 1 1 1 d d 1 2 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+`;
+            case "image16":
+            case "8x8 base":return img`
+8 . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . 8 
+`;
         }
         return null;
     })
 
     helpers._registerFactory("animation", function(name: string) {
         switch(helpers.stringTrim(name)) {
-
+            case "portal1":
+            case "anim1":return [img`
+. 8 8 8 8 8 8 . 
+8 6 6 6 6 6 8 8 
+6 8 8 8 8 8 6 8 
+6 8 8 6 8 8 6 8 
+6 8 6 8 6 8 6 8 
+6 8 6 8 8 8 6 8 
+6 8 8 6 6 6 8 8 
+. 8 8 8 8 8 8 . 
+`, img`
+. 6 6 6 6 6 8 . 
+8 8 8 8 8 8 6 8 
+8 8 6 6 8 8 6 8 
+8 6 8 8 6 8 6 8 
+8 6 8 6 8 8 6 8 
+8 6 8 8 8 8 6 8 
+8 8 6 6 6 6 8 8 
+. 8 8 8 8 8 8 . 
+`, img`
+. 8 8 8 8 8 8 . 
+8 8 6 6 6 8 8 6 
+8 6 8 8 8 6 8 6 
+8 6 8 6 8 6 8 6 
+8 6 8 8 6 8 8 6 
+8 6 8 8 8 8 8 6 
+8 8 6 6 6 6 6 8 
+. 8 8 8 8 8 8 . 
+`, img`
+. 8 8 8 8 8 8 . 
+8 8 6 6 6 6 8 8 
+8 6 8 8 8 8 6 8 
+8 6 8 8 6 8 6 8 
+8 6 8 6 8 8 6 8 
+8 6 8 8 6 6 8 8 
+8 6 8 8 8 8 8 8 
+. 8 6 6 6 6 6 . 
+`];
+            case "portal2":
+            case "anim2":return [img`
+. 2 2 2 2 2 2 . 
+2 4 4 4 4 4 2 2 
+4 2 2 2 2 2 4 2 
+4 2 2 4 2 2 4 2 
+4 2 4 2 4 2 4 2 
+4 2 4 2 2 2 4 2 
+4 2 2 4 4 4 2 2 
+. 2 2 2 2 2 2 . 
+`, img`
+. 4 4 4 4 4 2 . 
+2 2 2 2 2 2 4 2 
+2 2 4 4 2 2 4 2 
+2 4 2 2 4 2 4 2 
+2 4 2 4 2 2 4 2 
+2 4 2 2 2 2 4 2 
+2 2 4 4 4 4 2 2 
+. 2 2 2 2 2 2 . 
+`, img`
+. 2 2 2 2 2 2 . 
+2 2 4 4 4 2 2 4 
+2 4 2 2 2 4 2 4 
+2 4 2 4 2 4 2 4 
+2 4 2 2 4 2 2 4 
+2 4 2 2 2 2 2 4 
+2 2 4 4 4 4 4 2 
+. 2 2 2 2 2 2 . 
+`, img`
+. 2 2 2 2 2 2 . 
+2 2 4 4 4 4 2 2 
+2 4 2 2 2 2 4 2 
+2 4 2 2 4 2 4 2 
+2 4 2 4 2 2 4 2 
+2 4 2 2 4 4 2 2 
+2 4 2 2 2 2 2 2 
+. 2 4 4 4 4 4 . 
+`];
         }
         return null;
     })
