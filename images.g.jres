@@ -99,6 +99,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "consset"
     },
+    "image21": {
+        "data": "hwQIAAgAAADg7u7u4ABC5IiIQuQYiyLkGItA4oCIROLgAEDi4O7u7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "DestroyDataaaaa"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",

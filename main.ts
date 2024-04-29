@@ -45,6 +45,18 @@ function setPlayer () {
     sprites.readDataImage(mySprite, "ImgBH").replace(8, 13)
     sprites.readDataImage(mySprite, "ImgBH").replace(5, 2)
 }
+function SetGameSettings () {
+    BeffyMode = game.ask("Is your system not trash?")
+    if (BeffyMode) {
+        SpriteLimit = 75
+    } else {
+        SpriteLimit = 50
+    }
+    if (!(game.ask("Is the settings good?"))) {
+        game.splash("Ill say it again.")
+        SetGameSettings()
+    }
+}
 function Init () {
     BeffyMode = game.ask("Allow extra sprites?")
     if (BeffyMode) {
@@ -91,7 +103,8 @@ let myMenu = miniMenu.createMenu(
 miniMenu.createMenuItem("PLAY", assets.image`playIcon`),
 miniMenu.createMenuItem("INSTRUCTIONS", assets.image`QUESTIONN`),
 miniMenu.createMenuItem("GAME SETTINGS", assets.image`gameset`),
-miniMenu.createMenuItem("SYST SETTINGS", assets.image`consset`)
+miniMenu.createMenuItem("SYST SETTINGS", assets.image`consset`),
+miniMenu.createMenuItem("CLEAR GAME", assets.image`DestroyDataaaaa`)
 )
 myMenu.setPosition(80, 90)
 /**
@@ -115,12 +128,29 @@ game.onUpdate(function () {
                     myMenu.close()
                     TitleScreen = false
                     MenuUp = false
-                } else if (0 == 0) {
-                    game.showLongText("Move with your favorite way to move. Press [B] to switch between tools. Press [A] to use the tool. Press [MENU] to open Invintory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- Mark", DialogLayout.Bottom)
-                } else if (false) {
+                } else if (selectedIndex == 1) {
+                    game.showLongText("Move with your favorite way to move. Press [B] to switch between tools. Press [A] to use the tool. Press [MENU] to open Invintory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- Mark", DialogLayout.Full)
+                } else if (selectedIndex == 2) {
+                    game.splash("I'm gonna ask you a couple of questions. Okay?", "A: Okay.")
+                    if (game.ask("Do you want to continue?")) {
+                        SetGameSettings()
+                    }
+                } else if (selectedIndex == 3) {
                 	
-                } else if (false) {
-                	
+                } else if (selectedIndex == 4) {
+                    if (game.ask("WHOA WHOA WHOA", "Are you sure?")) {
+                        if (game.ask("Like are you really sure?", "It would be gone forever!")) {
+                            if (game.ask("please dont hurt me", "Last chance to back away!")) {
+                                game.splash("Welp that's a shame.")
+                                game.splash("Ill get on with it")
+                                blockSettings.clear()
+                                game.splash("There ive deleted the data")
+                                while (true) {
+                                    game.splash("Now restart the game please.")
+                                }
+                            }
+                        }
+                    }
                 }
             })
         } else {

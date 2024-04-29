@@ -443,6 +443,17 @@ b b f c c f b b
 . 6 f 6 6 f 6 . 
 . 6 6 6 6 6 6 . 
 `;
+            case "image21":
+            case "DestroyDataaaaa":return img`
+. . 8 8 8 . . . 
+e e 8 1 1 8 e e 
+e . 8 b b 8 . e 
+e . 8 8 8 8 . e 
+e 2 2 2 . 4 . e 
+e 4 4 2 4 4 4 e 
+e 4 4 4 2 2 2 e 
+e e e e e e e e 
+`;
         }
         return null;
     })
