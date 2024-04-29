@@ -18,6 +18,11 @@ function setMap () {
             tiles.placeOnTile(mySprite2, value)
         }
     }
+    for (let value of tiles.getTilesByType(assets.tile`stone`)) {
+        if (Math.percentChance(0.0001)) {
+            tiles.setTileAt(value, assets.tile`stoneMoneyDrop`)
+        }
+    }
     for (let index = 0; index <= 4; index++) {
     	
     }
@@ -73,8 +78,8 @@ let mySprite: Sprite = null
 let mySprite2: Sprite = null
 let SpriteLimit = 0
 Init()
-game.splash("Ominouswolf presents...")
 game.splash("Warning!", "(10+) Contains: Guns.")
+game.splash("Ominouswolf presents...")
 scene.setBackgroundImage(assets.image`TitleEnlarge`)
 game.setDialogCursor(assets.image`PressA`)
 game.setDialogFrame(assets.image`Blank`)
@@ -83,11 +88,12 @@ game.showLongText("v1 By Ominouswolf", DialogLayout.Bottom)
 game.setDialogTextColor(15)
 game.setDialogFrame(assets.image`TextBox`)
 let myMenu = miniMenu.createMenu(
-miniMenu.createMenuItem("PLAY"),
-miniMenu.createMenuItem("INSTRUCTIONS"),
-miniMenu.createMenuItem("GAME SETTINGS"),
-miniMenu.createMenuItem("SYST SETTINGS")
+miniMenu.createMenuItem("PLAY", assets.image`playIcon`),
+miniMenu.createMenuItem("INSTRUCTIONS", assets.image`QUESTIONN`),
+miniMenu.createMenuItem("GAME SETTINGS", assets.image`gameset`),
+miniMenu.createMenuItem("SYST SETTINGS", assets.image`consset`)
 )
+myMenu.setPosition(80, 90)
 /**
  * (Funny consept for homes)
  * 

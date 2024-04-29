@@ -79,6 +79,26 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "8x8 base"
     },
+    "image17": {
+        "data": "hwQIAAgAAAAAREQAQFVVBFRVVUVURERFVERERVRVVUVAVVUEAEREAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "playIcon"
+    },
+    "image18": {
+        "data": "hwQIAAgAAAAAAAAAsAwAALsMAADLAMvLy7DLy7u7DACwywAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "QUESTIONN"
+    },
+    "image19": {
+        "data": "hwQIAAgAAAAAsAsAwLzLDMD//wy7z/y7u8/8u8D//wzAvMsMALALAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "gameset"
+    },
+    "image20": {
+        "data": "hwQIAAgAAAAAAAAAZmb2ZpaZ/2+WmfZmlplmZpaZZm9mZvZmAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "consset"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",

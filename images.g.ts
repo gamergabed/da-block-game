@@ -399,6 +399,50 @@ b b b c c c c f
 . . . . . . . . 
 . . . . . . . 8 
 `;
+            case "image17":
+            case "playIcon":return img`
+. . 4 4 4 4 . . 
+. 4 5 5 5 5 4 . 
+4 5 5 4 4 5 5 4 
+4 5 5 4 4 5 5 4 
+4 5 5 4 4 5 5 4 
+4 5 5 4 4 5 5 4 
+. 4 5 5 5 5 4 . 
+. . 4 4 4 4 . . 
+`;
+            case "image18":
+            case "QUESTIONN":return img`
+. . b b b b . . 
+. b b c c b b . 
+. c c . . b b . 
+. . . . b b c . 
+. . . b b c . . 
+. . . c c . . . 
+. . . b b . . . 
+. . . c c . . . 
+`;
+            case "image19":
+            case "gameset":return img`
+. . . b b . . . 
+. c c b b c c . 
+. c f f f f c . 
+b b f c c f b b 
+b b f c c f b b 
+. c f f f f c . 
+. c c b b c c . 
+. . . b b . . . 
+`;
+            case "image20":
+            case "consset":return img`
+. 6 6 6 6 6 6 . 
+. 6 9 9 9 9 6 . 
+. 6 9 9 9 9 6 . 
+. 6 9 9 9 9 6 . 
+. 6 f 6 6 6 6 . 
+. f f f 6 6 f . 
+. 6 f 6 6 f 6 . 
+. 6 6 6 6 6 6 . 
+`;
         }
         return null;
     })
