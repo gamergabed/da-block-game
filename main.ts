@@ -2,13 +2,6 @@ namespace SpriteKind {
     export const Treeeeeee = SpriteKind.create()
     export const NPC = SpriteKind.create()
 }
-function personOddTile (X: number, Y: number) {
-    if ((X + Y) % 2 == 0) {
-        return true
-    } else {
-        return false
-    }
-}
 function setMap () {
     tiles.setCurrentTilemap(tileUtil.createSmallMap(tilemap`CityMap`))
     for (let value of tiles.getTilesByType(assets.tile`treeSpawn`)) {
@@ -18,9 +11,9 @@ function setMap () {
             tiles.placeOnTile(mySprite2, value)
         }
     }
-    for (let value of tiles.getTilesByType(assets.tile`stone`)) {
+    for (let value2 of tiles.getTilesByType(assets.tile`stone`)) {
         if (Math.percentChance(0.0001)) {
-            tiles.setTileAt(value, assets.tile`stoneMoneyDrop`)
+            tiles.setTileAt(value2, assets.tile`stoneMoneyDrop`)
         }
     }
     for (let index = 0; index <= 4; index++) {
@@ -44,6 +37,13 @@ function setPlayer () {
     sprites.readDataImage(mySprite, "ImgAH").replace(5, 2)
     sprites.readDataImage(mySprite, "ImgBH").replace(8, 13)
     sprites.readDataImage(mySprite, "ImgBH").replace(5, 2)
+}
+function personOddTile (X: number, Y: number) {
+    if ((X + Y) % 2 == 0) {
+        return true
+    } else {
+        return false
+    }
 }
 function SetGameSettings () {
     BeffyMode = game.ask("Is your system not trash?")
@@ -90,7 +90,6 @@ let mySprite: Sprite = null
 let mySprite2: Sprite = null
 let SpriteLimit = 0
 Init()
-game.splash("Warning!", "(10+) Contains: Guns.")
 game.splash("Ominouswolf presents...")
 scene.setBackgroundImage(assets.image`TitleEnlarge`)
 game.setDialogCursor(assets.image`PressA`)
@@ -107,17 +106,15 @@ miniMenu.createMenuItem("SYST SETTINGS", assets.image`consset`),
 miniMenu.createMenuItem("CLEAR GAME", assets.image`DestroyDataaaaa`)
 )
 myMenu.setPosition(80, 90)
-/**
- * (Funny consept for homes)
- * 
- * Red & Blue: 3/4 added
- * 
- * Red: 1/2 added
- * 
- * Blue: 1/4 added
- * 
- * No color: Normal cost
- */
+// (Funny consept for homes)
+// 
+// Red & Blue: 3/4 added
+// 
+// Red: 1/2 added
+// 
+// Blue: 1/4 added
+// 
+// No color: Normal cost
 game.onUpdate(function () {
     if (MenuUp) {
         if (TitleScreen) {
@@ -136,7 +133,7 @@ game.onUpdate(function () {
                         SetGameSettings()
                     }
                 } else if (selectedIndex == 3) {
-                	
+                    scene.systemMenu.showSystemMenu()
                 } else if (selectedIndex == 4) {
                     if (game.ask("WHOA WHOA WHOA", "Are you sure?")) {
                         if (game.ask("Like are you really sure?", "It would be gone forever!")) {
@@ -170,7 +167,7 @@ game.onUpdate(function () {
                 mySprite.setImage(sprites.readDataImage(mySprite, "ImgA"))
             }
         }
-        for (let value of sprites.allOfKind(SpriteKind.NPC)) {
+        for (let value3 of sprites.allOfKind(SpriteKind.NPC)) {
         	
         }
     }
