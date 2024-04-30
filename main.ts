@@ -77,6 +77,11 @@ function Init () {
     ]
     MenuUp = true
     TitleScreen = true
+    if (blockSettings.exists("BEFFY")) {
+        SpriteLimit = 75
+    } else {
+        SpriteLimit = 50
+    }
 }
 let TitleScreen = false
 let MenuUp = false
