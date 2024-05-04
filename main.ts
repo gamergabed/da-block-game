@@ -74,6 +74,20 @@ function SetGameSettings () {
             blockSettings.remove("BEFFY")
         }
     }
+    if (game.ask("Are you colorblind", "(as in Deuteranomaly)")) {
+        blockSettings.writeNumber("DEUTPALL", 0)
+    } else {
+        if (blockSettings.exists("DEUTPALL")) {
+            blockSettings.remove("DEUTPALL")
+        }
+    }
+    if (game.ask("Are you skilled?", "Hard mode?")) {
+        blockSettings.writeNumber("HARD", 0)
+    } else {
+        if (blockSettings.exists("HARD")) {
+            blockSettings.remove("HARD")
+        }
+    }
     if (!(game.ask("Is the settings good?"))) {
         game.splash("Ill say it again.")
         SetGameSettings()
@@ -99,6 +113,15 @@ function Init () {
         SpriteLimit = 75
     } else {
         SpriteLimit = 50
+    }
+    if (blockSettings.exists("DEUTPALL")) {
+        color.setPalette(
+        color.originalPalette
+        )
+    } else {
+        color.setPalette(
+        color.Arcade
+        )
     }
 }
 let TitleScreen = false
@@ -183,7 +206,7 @@ game.onUpdate(function () {
                     TitleScreen = false
                     MenuUp = false
                 } else if (selectedIndex == 1) {
-                    game.showLongText("Move with your favorite way to move. Press [B] to switch between tools. Press [A] to use the tool. Press [MENU] to open Invintory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- The NOT wolf", DialogLayout.Full)
+                    game.showLongText("Move with your favorite way to move. Press [B] to switch between tools/weapons. Press [A] to use the tool/fire the weapon. Press [MENU] to open Inventory/Pause menu. Goal? Psshh, there's no goal! Do what you want here! (I do hear that you can own the entire block)- The NOT wolf", DialogLayout.Full)
                 } else if (selectedIndex == 2) {
                     scene.setBackgroundImage(img`
                         ................................................................................................................................................................

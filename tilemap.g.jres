@@ -237,12 +237,6 @@
         "tilemapTile": true,
         "displayName": "BUSSSHH"
     },
-    "tile16": {
-        "data": "hwQIAAgAAAC7u7u7m2ZmtptmZrZrZma2a2ZmtmtmZrlrZma5u7u7uw==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "gunWindow0"
-    },
     "tile18": {
         "data": "hwQIAAgAAABERERElJmUSZSZlEmUmZRJRERERJSZlEmUmZRJRERERA==",
         "mimeType": "image/x-mkcd-f4",
@@ -260,6 +254,12 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "jobWindow"
+    },
+    "tile16": {
+        "data": "hwQIAAgAAAC7u7u7G5mZuRuZmbmbmZm5m5mZuZuZmbGbmZmxu7u7uw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "gunWindow0"
     },
     "level1": {
         "id": "level1",
