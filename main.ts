@@ -20,15 +20,6 @@ function setMap () {
     	
     }
 }
-/**
- * 60
- * 
- * -15
- * 
- * ------
- * 
- * _45
- */
 function setPlayer () {
     mySprite = sprites.create(assets.image`PersonA`, SpriteKind.Player)
     controller.moveSprite(mySprite, 75, 75)
@@ -186,6 +177,15 @@ miniMenu.createMenuItem("SYST SETTINGS", assets.image`consset`),
 miniMenu.createMenuItem("CLEAR GAME", assets.image`DestroyDataaaaa`)
 )
 myMenu.setPosition(80, 90)
+/**
+ * 60
+ * 
+ * -15
+ * 
+ * ------
+ * 
+ * _45
+ */
 // (Funny concept for homes)
 // 
 // Red & Blue: 3/4 added
@@ -345,6 +345,7 @@ game.onUpdate(function () {
                     if (game.ask("Do you want to continue?")) {
                         SetGameSettings()
                     }
+                    Init()
                     scene.setBackgroundImage(assets.image`Mark`)
                     game.showLongText("Right that's all the questions. I'll see you later.", DialogLayout.Bottom)
                     game.setDialogFrame(assets.image`TextBox`)
