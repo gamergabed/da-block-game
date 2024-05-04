@@ -20,6 +20,15 @@ function setMap () {
     	
     }
 }
+/**
+ * 60
+ * 
+ * -15
+ * 
+ * ------
+ * 
+ * _45
+ */
 function setPlayer () {
     mySprite = sprites.create(assets.image`PersonA`, SpriteKind.Player)
     controller.moveSprite(mySprite, 75, 75)
@@ -37,6 +46,15 @@ function setPlayer () {
     sprites.readDataImage(mySprite, "ImgAH").replace(5, 2)
     sprites.readDataImage(mySprite, "ImgBH").replace(8, 13)
     sprites.readDataImage(mySprite, "ImgBH").replace(5, 2)
+    infooooo = textsprite.create("MONEYMONEYMONEY", 4, 1)
+    infooooo.setFlag(SpriteFlag.RelativeToCamera, true)
+    infooooo.setPosition(45, 12)
+    itemm = sprites.create(assets.image`ItemSel`, SpriteKind.Player)
+    itemm.setFlag(SpriteFlag.RelativeToCamera, true)
+    itemm.setPosition(152, 8)
+    HP = statusbars.create(144, 8, StatusBarKind.Health)
+    HP.setBarBorder(1, 15)
+    HP.setPosition(72, 4)
 }
 function personOddTile (X: number, Y: number) {
     if ((X + Y) % 2 == 0) {
@@ -46,7 +64,7 @@ function personOddTile (X: number, Y: number) {
     }
 }
 function SetGameSettings () {
-    BeffyMode = game.ask("Is your system not trash?")
+    BeffyMode = game.ask("Is your system not trash?", "Eg, a meowbit, Micro:bit")
     if (BeffyMode) {
         SpriteLimit = 75
         blockSettings.writeNumber("BEFFY", 0)
@@ -89,6 +107,9 @@ let HouseCosts: number[] = []
 let HouseNames: string[] = []
 let TelephoneNames: string[] = []
 let BeffyMode = false
+let HP: StatusBarSprite = null
+let itemm: Sprite = null
+let infooooo: TextSprite = null
 let mySprite: Sprite = null
 let mySprite2: Sprite = null
 let SpriteLimit = 0
@@ -105,7 +126,11 @@ if (blockSettings.list().length == 0) {
     pause(50)
     if (game.ask("This is your first time", "booting up eh?")) {
         scene.setBackgroundImage(assets.image`Mark`)
-        game.showLongText("I knew it.", DialogLayout.Bottom)
+        game.showLongText("I thought so judging from your time here in town.", DialogLayout.Bottom)
+        scene.setBackgroundImage(assets.image`MarkSTOP`)
+        game.showLongText("AND YES I CAN VIEW THAT!", DialogLayout.Bottom)
+        scene.setBackgroundImage(assets.image`Mark`)
+        game.showLongText("Anywho", DialogLayout.Bottom)
     } else {
         scene.setBackgroundImage(assets.image`MarkSTOP`)
         game.showLongText("Well I say so! Anyways,", DialogLayout.Bottom)
@@ -314,8 +339,8 @@ game.onUpdate(function () {
                     if (game.ask("WHOA WHOA WHOA", "Are you sure?")) {
                         if (game.ask("Like are you really sure?", "It would be gone forever!")) {
                             if (game.ask("Are you really really sure?", "Last chance to back away!")) {
-                                game.splash("Welp that's a shame.")
-                                game.splash("Ill get on with it")
+                                game.splash("Welp I tryed.")
+                                game.splash("Ill get on with it", "(RESTART NOW TO SAY NO!!!!)")
                                 blockSettings.clear()
                                 game.splash("There ive deleted the data")
                                 while (true) {
@@ -330,6 +355,7 @@ game.onUpdate(function () {
         	
         }
     } else {
+        let $$$ = 0
         if (personOddTile(mySprite.tilemapLocation().column, mySprite.tilemapLocation().row)) {
             if (controller.A.isPressed()) {
                 mySprite.setImage(sprites.readDataImage(mySprite, "ImgBH"))
@@ -346,5 +372,6 @@ game.onUpdate(function () {
         for (let value3 of sprites.allOfKind(SpriteKind.NPC)) {
         	
         }
+        infooooo.setText("Cash: $" + $$$ + " Ammo: ")
     }
 })

@@ -35,12 +35,6 @@ namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
     export const tile15 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
-    export const tile16 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
-    export const tile17 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
-    export const tile18 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
     export const tile19 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile20 = image.ofBuffer(hex``);
@@ -67,8 +61,6 @@ namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
     export const tile30 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
-    export const tile35 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
     export const tile32 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile34 = image.ofBuffer(hex``);
@@ -88,6 +80,14 @@ namespace myTiles {
     export const tile33 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile42 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile16 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile18 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile17 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile35 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
@@ -436,12 +436,6 @@ namespace myTiles {
             case "tile14":return tile14;
             case "stone":
             case "tile15":return tile15;
-            case "gunWindow0":
-            case "tile16":return tile16;
-            case "estateWindow0":
-            case "tile17":return tile17;
-            case "toolWindow":
-            case "tile18":return tile18;
             case "bankWindow":
             case "tile19":return tile19;
             case "woodWallA1":
@@ -468,8 +462,6 @@ namespace myTiles {
             case "tile29":return tile29;
             case "stoneWall":
             case "tile30":return tile30;
-            case "jobWindow":
-            case "tile35":return tile35;
             case "treeSpawn":
             case "tile32":return tile32;
             case "jobDoor":
@@ -490,6 +482,14 @@ namespace myTiles {
             case "tile33":return tile33;
             case "BUSSSHH":
             case "tile42":return tile42;
+            case "gunWindow0":
+            case "tile16":return tile16;
+            case "toolWindow":
+            case "tile18":return tile18;
+            case "estateWindow0":
+            case "tile17":return tile17;
+            case "jobWindow":
+            case "tile35":return tile35;
         }
         return null;
     })

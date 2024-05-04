@@ -128,25 +128,6 @@ f777777777777777777777f.
 . 4 4 . . . . . 
 . . . . . 4 4 . 
 `;
-            case "image10":
-            case "ItemSel":return img`
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-1 f f f f f f f f f f f f f f 1 
-1 f f d d d d d d d f f f f f 1 
-1 f f d d b b b d d f f f f f 1 
-1 f f d d b b b d d f f f f f 1 
-1 f f d d b b b d d f f f f f 1 
-1 f f d d d b d d b 4 4 4 4 f 1 
-1 f f 7 6 6 6 6 6 6 8 7 3 3 f 1 
-1 f f 7 6 8 6 8 8 8 7 7 3 3 f 1 
-1 f f d d 8 6 8 6 d 7 7 4 4 f 1 
-1 f f d b 6 6 b b d f f f f f 1 
-1 f f d 6 8 8 d d d f f f f f 1 
-1 f f d b d d d d d f f f f f 1 
-1 f f d d d d d d d f f f f f 1 
-1 f f f f f f f f f f f f f f 1 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-`;
             case "image1":
             case "TitleDraw":return img`
 99999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -1068,6 +1049,25 @@ fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffccccccccccccccccccc
 fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffccccccccccccccccccccccccccccccccccccccfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffccccccccccccccccccccccccccccccccccccccfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffccccccccccccccccccccccccccccccccccccccfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+`;
+            case "image10":
+            case "ItemSel":return img`
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 f f f f f f f f f f f f f f 1 
+1 f f d d d d d d d f f f f f 1 
+1 f f d d b b b d d f f f f f 1 
+1 f f d d b b b d d f f f f f 1 
+1 f f d d b b b d d f f f f f 1 
+1 f f d d d b d d b 4 4 4 c f 1 
+1 f f 7 6 6 6 6 6 6 8 7 3 5 f 1 
+1 f f 7 6 8 6 8 8 8 7 7 3 2 f 1 
+1 f f d d 8 6 8 6 d 7 7 4 a f 1 
+1 f f d b 6 6 b b d f f f f f 1 
+1 f f d 6 8 8 d d d f f f f f 1 
+1 f f d b d d d d d f f f f f 1 
+1 f f d d d d d d d f f f f f 1 
+1 f f f f f f f f f f f f f f 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 `;
         }
         return null;

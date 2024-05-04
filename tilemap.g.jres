@@ -99,24 +99,6 @@
         "tilemapTile": true,
         "displayName": "stone"
     },
-    "tile16": {
-        "data": "hwQIAAgAAAC7u7u7m5meuZuZnrmbmZ656+7uvpuZnrmbmZ65u7u7uw==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "gunWindow0"
-    },
-    "tile17": {
-        "data": "hwQIAAgAAADd3d3dnZme2Z2ZntmdmZ7Z7e7u3p2ZntmdmZ7Z3d3d3Q==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "estateWindow0"
-    },
-    "tile18": {
-        "data": "hwQIAAgAAABERERElJmeSZSZnkmUmZ5J5O7uTpSZnkmUmZ5JRERERA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "toolWindow"
-    },
     "tile19": {
         "data": "hwQIAAgAAADMzMzMnJmZyZxmmcmcmZnJnJmZyZyZZsmcmZnJzMzMzA==",
         "mimeType": "image/x-mkcd-f4",
@@ -195,12 +177,6 @@
         "tilemapTile": true,
         "displayName": "stoneWall"
     },
-    "tile35": {
-        "data": "hwQIAAgAAACIiIiImJmYiZiZmImYmZiJiIiIiJiZmImYmZiJiIiIiA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "jobWindow"
-    },
     "tile32": {
         "data": "hwQIAAgAAAAIAGZmiIhmYAgAZmAAAAAAiIhmZogIZmCIgGZgAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
@@ -260,6 +236,30 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "BUSSSHH"
+    },
+    "tile16": {
+        "data": "hwQIAAgAAAC7u7u7m2ZmtptmZrZrZma2a2ZmtmtmZrlrZma5u7u7uw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "gunWindow0"
+    },
+    "tile18": {
+        "data": "hwQIAAgAAABERERElJmUSZSZlEmUmZRJRERERJSZlEmUmZRJRERERA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "toolWindow"
+    },
+    "tile17": {
+        "data": "hwQIAAgAAADd3d3dnZmd2Z2Zndnd3Z3Zndnd3Z3Zmdmd2ZnZ3d3d3Q==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "estateWindow0"
+    },
+    "tile35": {
+        "data": "hwQIAAgAAACIiIiImJmZiZiZmYmYmZmJmJmZiZiZmYmYmZmJiIiIiA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "jobWindow"
     },
     "level1": {
         "id": "level1",
