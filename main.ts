@@ -338,15 +338,18 @@ game.onUpdate(function () {
                     scene.setBackgroundImage(assets.image`Mark`)
                     game.showLongText("Hi again kid.", DialogLayout.Bottom)
                     scene.setBackgroundImage(assets.image`MarkQestionnn`)
-                    game.showLongText("I'm gonna ask you a couple of questions. K?", DialogLayout.Bottom)
+                    game.showLongText("I'm gonna ask you the same questions as when you first got here. K?", DialogLayout.Bottom)
                     scene.setBackgroundImage(assets.image`Mark`)
-                    game.showLongText("First of all...", DialogLayout.Bottom)
+                    game.showLongText("Alright let's do this.", DialogLayout.Bottom)
                     scene.setBackgroundImage(assets.image`MarkRED`)
                     if (game.ask("Do you want to continue?")) {
                         SetGameSettings()
                     }
                     scene.setBackgroundImage(assets.image`Mark`)
                     game.showLongText("Right that's all the questions. I'll see you later.", DialogLayout.Bottom)
+                    game.setDialogFrame(assets.image`TextBox`)
+                    game.setDialogCursor(assets.image`PressA`)
+                    game.setDialogTextColor(15)
                     scene.setBackgroundImage(assets.image`TitleEnlarge`)
                     myMenu = miniMenu.createMenu(
                     miniMenu.createMenuItem("PLAY", assets.image`playIcon`),
