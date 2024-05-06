@@ -23,7 +23,6 @@ function setMap () {
 function setPlayer () {
     mySprite = sprites.create(assets.image`PersonA`, SpriteKind.Player)
     controller.moveSprite(mySprite, 75, 75)
-    scene.cameraFollowSprite(mySprite)
     tiles.placeOnRandomTile(mySprite, assets.tile`stone`)
     sprites.setDataImageValue(mySprite, "ImgA", assets.image`PersonA`)
     sprites.setDataImageValue(mySprite, "ImgB", assets.image`PlayerB`)
@@ -37,15 +36,12 @@ function setPlayer () {
     sprites.readDataImage(mySprite, "ImgAH").replace(5, 2)
     sprites.readDataImage(mySprite, "ImgBH").replace(8, 13)
     sprites.readDataImage(mySprite, "ImgBH").replace(5, 2)
-    infooooo = textsprite.create("MONEYMONEYMONEY", 4, 1)
+    infooooo = textsprite.create("oggaaaaa", 6, 1)
     infooooo.setFlag(SpriteFlag.RelativeToCamera, true)
     infooooo.setPosition(45, 12)
-    itemm = sprites.create(assets.image`ItemSel`, SpriteKind.Player)
-    itemm.setFlag(SpriteFlag.RelativeToCamera, true)
-    itemm.setPosition(152, 8)
-    HP = statusbars.create(144, 8, StatusBarKind.Health)
+    HP = statusbars.create(160, 8, StatusBarKind.Health)
     HP.setBarBorder(1, 15)
-    HP.setPosition(72, 4)
+    HP.setPosition(80, 4)
 }
 function personOddTile (X: number, Y: number) {
     if ((X + Y) % 2 == 0) {
@@ -100,6 +96,9 @@ function Init () {
     ]
     MenuUp = true
     TitleScreen = true
+    item = "PSTL"
+    $$$ = 99999
+    ammo = 99
     if (blockSettings.exists("BEFFY")) {
         SpriteLimit = 75
     } else {
@@ -115,6 +114,9 @@ function Init () {
         )
     }
 }
+let ammo = 0
+let $$$ = 0
+let item = ""
 let TitleScreen = false
 let MenuUp = false
 let HouseCosts: number[] = []
@@ -122,7 +124,6 @@ let HouseNames: string[] = []
 let TelephoneNames: string[] = []
 let BeffyMode = false
 let HP: StatusBarSprite = null
-let itemm: Sprite = null
 let infooooo: TextSprite = null
 let mySprite: Sprite = null
 let mySprite2: Sprite = null
@@ -176,16 +177,8 @@ miniMenu.createMenuItem("GAME SETTINGS", assets.image`gameset`),
 miniMenu.createMenuItem("SYST SETTINGS", assets.image`consset`),
 miniMenu.createMenuItem("CLEAR GAME", assets.image`DestroyDataaaaa`)
 )
-myMenu.setPosition(80, 90)
-/**
- * 60
- * 
- * -15
- * 
- * ------
- * 
- * _45
- */
+myMenu.setFrame(assets.image`MenuBox`)
+myMenu.setPosition(80, 85)
 // (Funny concept for homes)
 // 
 // Red & Blue: 3/4 added
@@ -382,7 +375,6 @@ game.onUpdate(function () {
         	
         }
     } else {
-        let $$$ = 0
         if (personOddTile(mySprite.tilemapLocation().column, mySprite.tilemapLocation().row)) {
             if (controller.A.isPressed()) {
                 mySprite.setImage(sprites.readDataImage(mySprite, "ImgBH"))
@@ -399,6 +391,7 @@ game.onUpdate(function () {
         for (let value3 of sprites.allOfKind(SpriteKind.NPC)) {
         	
         }
-        infooooo.setText("Cash: $" + $$$ + " Ammo: ")
+        infooooo.setText("$: $" + $$$ + " E: " + ammo + " I: " + item)
+        scene.centerCameraAt(mySprite.x, mySprite.y - 8)
     }
 })

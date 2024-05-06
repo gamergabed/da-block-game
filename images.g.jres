@@ -129,6 +129,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "ItemSel"
     },
+    "image27": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////AAAfEREREfEAAB8RERER8QAAHxERERHxAAAfEREREfEAAB8RERER8QAAHxERERHxAAAfEREREfEAAB8RERER8QAA////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "MenuBox"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",
