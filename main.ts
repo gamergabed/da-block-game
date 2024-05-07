@@ -36,9 +36,9 @@ function setPlayer () {
     sprites.readDataImage(mySprite, "ImgAH").replace(5, 2)
     sprites.readDataImage(mySprite, "ImgBH").replace(8, 13)
     sprites.readDataImage(mySprite, "ImgBH").replace(5, 2)
-    infooooo = textsprite.create("oggaaaaa", 6, 1)
+    infooooo = textsprite.create("boo", 6, 1)
     infooooo.setFlag(SpriteFlag.RelativeToCamera, true)
-    infooooo.setPosition(45, 12)
+    infooooo.setPosition(20, 12)
     HP = statusbars.create(160, 8, StatusBarKind.Health)
     HP.setBarBorder(1, 15)
     HP.setPosition(80, 4)
@@ -97,7 +97,7 @@ function Init () {
     MenuUp = true
     TitleScreen = true
     item = "PSTL"
-    $$$ = 99999
+    $$$ = 999999
     ammo = 99
     if (blockSettings.exists("BEFFY")) {
         SpriteLimit = 75
